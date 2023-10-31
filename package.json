@@ -1,8 +1,9 @@
 {
   "name": "react-oppgave-1",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://adriank-b06.github.io/React-Oppgave-1/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
