@@ -1,42 +1,115 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: whitesmoke;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+h1 {
+  color: #333;
   text-align: center;
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h2 {
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+  background-color: lightgray;
+  color: #333;
+  height: 600px;
+  width: 450px;
+  overflow: auto;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+main::-webkit-scrollbar-track {
+  background: transparent;
+}
+main::-webkit-scrollbar-thumb {
+  background-color: transparent;
 }
 
-.card {
-  padding: 2em;
+nav ul {
+  list-style: none;
+  display: flex;
 }
 
-.read-the-docs {
-  color: #888;
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+
+}
+
+.search-bar input {
+  padding: 5px;
+  margin-right: 10px;
+  height: 35px;
+}
+
+
+.blog-post {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.like-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 7px 15px;
+  cursor: pointer;
+  margin-top: 20px;
+
+}
+
+.read-more {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.search-btn {
+  background-color: #007bff;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 20px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+
 }
