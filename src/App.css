@@ -93,6 +93,7 @@ nav a {
 .read-more {
   font-style: italic;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .search-btn {
