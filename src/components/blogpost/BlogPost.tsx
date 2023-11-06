@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-
-console.log(React);
+import { useState } from "react";
 
 type BlogPostProps = {
   title: string;
