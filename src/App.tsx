@@ -10,7 +10,9 @@ function App() {
 
   const handleSearch = (searchTerm: string) => {
     const filteredResults = blogText.filter((post) =>
-      post.content.toLowerCase().includes(searchTerm.toLowerCase())
+      (post.content + " " + post.additionalContent)
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase())
     );
     setFilteredBlogText(filteredResults);
   };
