@@ -1,6 +1,6 @@
 import "./App.css";
-import NavBar from "./components/navBar/navBar.tsx";
-import { blogText } from "./components/blogpost/BlogText.tsx";
+import NavBar from "./components/navBar/navBar";
+import { blogText } from "./components/blogpost/BlogText";
 import BlogList from "./components/blogpost/BlogList";
 
 function App() {
