@@ -1,4 +1,10 @@
-export default function NavBar() {
+import { ReactNode } from "react";
+
+type NavBarProps = {
+  children: ReactNode;
+};
+
+export default function NavBar({ children }: NavBarProps) {
   return (
     <div>
       <header>
@@ -12,10 +18,7 @@ export default function NavBar() {
             </li>
           </ul>
         </nav>
-        <div className="search-bar">
-          <input type="text" placeholder="Search"></input>
-          <button className="search-btn">Search</button>
-        </div>
+        <div className="search-bar">{children}</div>
       </header>
     </div>
   );

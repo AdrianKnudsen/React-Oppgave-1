@@ -14,17 +14,19 @@ export default function BlogPost(props: BlogPostProps) {
     setShowAdditionalContent(!showAdditionalContent);
   };
 
-  const displayContent = showAdditionalContent
+  const content = showAdditionalContent
     ? props.initialContent + " " + props.additionalContent
     : props.initialContent;
+
+  const buttonText = showAdditionalContent ? "Read Less" : props.readMore;
 
   return (
     <div>
       <section className="blog-post">
         <h2>{props.title}</h2>
-        <p>{displayContent}</p>
+        <p>{content}</p>
         <p className="read-more" onClick={toggleShowAdditionalContent}>
-          {showAdditionalContent ? "Read Less" : props.readMore}
+          {buttonText}
         </p>
         <button className="like-button">Like</button>
       </section>

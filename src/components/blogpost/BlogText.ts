@@ -26,4 +26,28 @@ export const blogText = [
     additionalContent:
       "Quantum computing's promise lies in its ability to tackle complex problems in fields such as cryptography and drug discovery. In this blog post, we discuss the race to develop practical quantum computers and their potential impact.",
   },
+  {
+    id: 4,
+    title: "The Impact of 5G Technology",
+    content:
+      "5G technology is revolutionizing the way we connect and communicate. With faster speeds and lower latency, it has the potential to transform industries such as healthcare, transportation, and entertainment.",
+    additionalContent:
+      "As 5G networks continue to expand, we explore the opportunities and challenges presented by this cutting-edge technology.",
+  },
+  {
+    id: 5,
+    title: "The World of Virtual Reality",
+    content:
+      "Virtual reality (VR) is changing the way we experience the digital world. From immersive gaming to virtual tours, VR offers new dimensions of interaction and exploration.",
+    additionalContent:
+      "In this blog post, we delve into the exciting developments in virtual reality and its potential applications in education and training.",
+  },
+  {
+    id: 6,
+    title: "The Promise of Renewable Energy",
+    content:
+      "Renewable energy sources, such as solar and wind power, are crucial for a sustainable future. They provide a clean and green alternative to traditional fossil fuels.",
+    additionalContent:
+      "We discuss the latest innovations in renewable energy and the global shift toward a greener, more sustainable energy landscape.",
+  },
 ];
