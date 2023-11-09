@@ -8,11 +8,15 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  max-height: 100vh;
-  background-color: whitesmoke;
+  background-color: lightgray;
+  min-height: 100vh;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #333;
   color: #fff;
   display: flex;
@@ -27,6 +31,7 @@ h1 {
   padding: 20px;
   font-size: 4vw;
   line-height: 1.1;
+  margin-top: 90px;
 }
 
 h2 {
@@ -43,6 +48,7 @@ main {
   padding: 20px;
   flex-grow: 1;
   overflow: auto;
+  margin-bottom: 60px;
 }
 
 main::-webkit-scrollbar-track {
@@ -139,6 +145,10 @@ footer {
   color: #fff;
   padding: 20px 20px;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 @media (max-width: 780) {
