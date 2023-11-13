@@ -3,12 +3,12 @@ import LoadingStatus from "./LoadingStatus";
 import ErrorDisplay from "./ErrorDisplay";
 
 type BlogListProps = {
-  blogText: BlogPostData[];
+  blogText: BlogPostInfo[];
   loading: boolean;
   error: string | null;
 };
 
-type BlogPostData = {
+export type BlogPostInfo = {
   id: number;
   title: string;
   content: string;

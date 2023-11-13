@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Avatar from "./Avatar";
 
-type BlogPostProps = {
+export type BlogPostProps = {
   title: string;
   initialContent: string;
   additionalContent: string;

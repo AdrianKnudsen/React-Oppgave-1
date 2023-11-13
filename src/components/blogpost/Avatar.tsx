@@ -2,11 +2,11 @@
 import React, { useMemo } from "react";
 import { createAvatar } from "@dicebear/core";
 import { lorelei } from "@dicebear/collection";
-import { BlogPostData } from "../blogpost/BlogPosts";
+import { BlogPostInfo } from "./BlogList";
 
 type AvatarProps = {
   size: number;
-  blogPostData: BlogPostData;
+  blogPostData: BlogPostInfo;
 };
 
 const Avatar: React.FC<AvatarProps> = ({ size, blogPostData }) => {
