@@ -140,6 +140,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+img {
+  float: right;
+}
+
 footer {
   background-color: #333;
   color: #fff;

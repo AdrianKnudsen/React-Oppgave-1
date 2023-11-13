@@ -6,15 +6,30 @@ import BlogList from "./components/blogpost/BlogList";
 import SearchBar from "./components/navBar/SearchBar";
 
 function App() {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [filteredBlogText, setFilteredBlogText] = useState(blogText);
 
   const handleSearch = (searchTerm: string) => {
-    const filteredResults = blogText.filter((post) =>
-      (post.content + " " + post.additionalContent)
-        .toLowerCase()
-        .includes(searchTerm.toLowerCase())
-    );
-    setFilteredBlogText(filteredResults);
+    try {
+      setLoading(true);
+
+      const filteredResults = blogText.filter((post) =>
+        (post.content + " " + post.additionalContent)
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase())
+      );
+
+      setFilteredBlogText(filteredResults);
+    } catch (error) {
+      if (typeof error === "string") {
+        setError(error);
+      } else {
+        console.error(error);
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -22,7 +37,8 @@ function App() {
       <NavBar>
         <SearchBar onSearch={handleSearch} />
       </NavBar>
-      <BlogList blogText={filteredBlogText} />
+      <BlogList blogText={filteredBlogText} loading={loading} error={error} />
+
       <footer>
         <p>© Kodehode 2023</p>
       </footer>
