@@ -1,49 +1,21 @@
-import { useState } from "react";
-import "./App.css";
-import NavBar from "./components/navBar/navBar";
-import { blogText } from "./components/blogpost/BlogText";
-import BlogList from "./components/blogpost/BlogList";
-import SearchBar from "./components/navBar/SearchBar";
+import React from "react";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import Landing from "./pages/Landing";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
 
-function App() {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [filteredBlogText, setFilteredBlogText] = useState(blogText);
-
-  const handleSearch = (searchTerm: string) => {
-    try {
-      setLoading(true);
-
-      const filteredResults = blogText.filter((post) =>
-        (post.content + " " + post.additionalContent)
-          .toLowerCase()
-          .includes(searchTerm.toLowerCase())
-      );
-
-      setFilteredBlogText(filteredResults);
-    } catch (error) {
-      if (typeof error === "string") {
-        setError(error);
-      } else {
-        console.error(error);
-      }
-    } finally {
-      setLoading(false);
-    }
-  };
-
+const App: React.FC = () => {
   return (
-    <div>
-      <NavBar>
-        <SearchBar onSearch={handleSearch} />
-      </NavBar>
-      <BlogList blogText={filteredBlogText} loading={loading} error={error} />
-
-      <footer>
-        <p>© Kodehode 2023</p>
-      </footer>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route path="/home" component={Home} />
+        <Route path="/about" component={About} />
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
