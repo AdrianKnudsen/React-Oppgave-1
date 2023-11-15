@@ -1,20 +1,21 @@
 import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 type NavBarProps = {
   children: ReactNode;
 };
 
-export default function NavBar({ children }: NavBarProps) {
+const NavBar: React.FC<NavBarProps> = ({ children }) => {
   return (
     <div>
       <header>
         <nav>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <Link to="/home">Home</Link>
             </li>
             <li>
-              <a href="#">About</a>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </nav>
@@ -22,4 +23,6 @@ export default function NavBar({ children }: NavBarProps) {
       </header>
     </div>
   );
-}
+};
+
+export default NavBar;
