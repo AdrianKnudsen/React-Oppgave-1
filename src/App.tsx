@@ -4,6 +4,7 @@ import NavBar from "./components/navBar/navBar";
 import { blogText } from "./components/blogpost/BlogText";
 import BlogList from "./components/blogpost/BlogList";
 import SearchBar from "./components/navBar/SearchBar";
+import FooterSection from "./components/navBar/footer";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -38,10 +39,7 @@ function App() {
         <SearchBar onSearch={handleSearch} />
       </NavBar>
       <BlogList blogText={filteredBlogText} loading={loading} error={error} />
-
-      <footer>
-        <p>© Kodehode 2023</p>
-      </footer>
+      <FooterSection />
     </div>
   );
 }
