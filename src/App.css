@@ -6,8 +6,6 @@
 
 body {
   font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
   background-color: lightgray;
   min-height: 100vh;
 }
@@ -47,7 +45,6 @@ main {
   align-items: center;
   padding: 20px;
   flex-grow: 1;
-  overflow: auto;
   margin-bottom: 60px;
 }
 
@@ -101,7 +98,7 @@ a:hover {
   background-color: #f9f9f9;
   border-radius: 10px;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .like-button {
@@ -138,14 +135,6 @@ button {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-.landing {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 5rem;
 }
 
 img {
