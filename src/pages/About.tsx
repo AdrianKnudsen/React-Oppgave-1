@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../components/navBar/navBar";
+import FooterSection from "../components/navBar/footer";
 
 const About: React.FC = () => {
   return (
@@ -32,6 +33,7 @@ const About: React.FC = () => {
           and become a part of our growing community!
         </p>
       </div>
+      <FooterSection />
     </div>
   );
 };
